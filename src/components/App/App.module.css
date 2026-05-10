@@ -1,0 +1,564 @@
+.app {
+  min-height: 100vh;
+  padding: 32px;
+  color: #e5e7eb;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(56, 189, 248, 0.22),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(251, 146, 60, 0.18),
+      transparent 28%
+    ),
+    linear-gradient(180deg, #0b1020 0%, #0e172e 44%, #111827 100%);
+}
+
+.hero {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  align-items: start;
+  margin: 0 auto 28px;
+  max-width: 1180px;
+}
+
+.heroSide {
+  display: grid;
+  gap: 16px;
+}
+
+.heroCopy {
+  padding: 24px 0;
+}
+
+.kicker {
+  margin: 0 0 14px;
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #93c5fd;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 5.1rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  max-width: 12ch;
+}
+
+.lead {
+  margin-top: 18px;
+  max-width: 58ch;
+  color: #cbd5e1;
+  font-size: 1.06rem;
+  line-height: 1.65;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.statCard,
+.formCard,
+.listCard,
+.budgetCard {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 80px rgba(2, 6, 23, 0.35);
+}
+
+.statCard {
+  border-radius: 22px;
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+  min-height: 126px;
+}
+
+.statCard span {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.statCard strong {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.92fr) minmax(320px, 1.08fr);
+  gap: 24px;
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+.geminiSection {
+  margin: 24px auto 0;
+  max-width: 1180px;
+}
+
+.listStack {
+  display: grid;
+  gap: 16px;
+}
+
+.formCard,
+.listCard,
+.budgetCard {
+  border-radius: 28px;
+  padding: 24px;
+}
+
+.budgetForm {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.budgetActions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+
+.cardHeader {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.cardHeader h2 {
+  margin: 0;
+  font-size: 1.45rem;
+  letter-spacing: -0.04em;
+}
+
+.cardHeader p {
+  margin: 0;
+  color: #94a3b8;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.field span {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(15, 23, 42, 0.9);
+  color: #f8fafc;
+  padding: 14px 16px;
+  font-size: 16px;
+  font: inherit;
+  outline: none;
+}
+
+.field input::placeholder {
+  color: #64748b;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: rgba(96, 165, 250, 0.8);
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.15);
+}
+
+.filterBar {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 80px rgba(2, 6, 23, 0.35);
+  border-radius: 28px;
+  padding: 24px;
+}
+
+.geminiCard {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 80px rgba(2, 6, 23, 0.35);
+  border-radius: 28px;
+  padding: 24px;
+}
+
+.geminiForm {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.geminiTips {
+  display: grid;
+  gap: 12px;
+}
+
+.geminiTip {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.geminiTip h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.geminiTip p {
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.error {
+  margin: 0 0 14px;
+  color: #fda4af;
+}
+
+.primaryButton {
+  width: 100%;
+  border: 0;
+  border-radius: 18px;
+  padding: 14px 18px;
+  font: inherit;
+  font-weight: 700;
+  color: #0f172a;
+  background: linear-gradient(135deg, #f8fafc 0%, #93c5fd 100%);
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(59, 130, 246, 0.24);
+}
+
+.secondaryButton {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 18px;
+  padding: 14px 18px;
+  background: rgba(15, 23, 42, 0.65);
+  color: #e5e7eb;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.secondaryButton:hover {
+  transform: translateY(-1px);
+  border-color: rgba(96, 165, 250, 0.4);
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.budgetSummary {
+  display: grid;
+  gap: 14px;
+}
+
+.budgetRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.budgetRow span {
+  color: #94a3b8;
+}
+
+.budgetRow strong {
+  font-size: 1.2rem;
+}
+
+.progressTrack {
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(30, 41, 59, 0.95);
+}
+
+.progressFill,
+.progressFillDanger {
+  height: 100%;
+  border-radius: inherit;
+  transition: width 180ms ease;
+}
+
+.progressFill {
+  background: linear-gradient(90deg, #38bdf8 0%, #60a5fa 100%);
+}
+
+.progressFillDanger {
+  background: linear-gradient(90deg, #f87171 0%, #fb7185 100%);
+}
+
+.hintText,
+.warningBanner {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.hintText {
+  color: #94a3b8;
+}
+
+.warningBanner {
+  color: #fecaca;
+}
+
+.warningText {
+  color: #fca5a5;
+}
+
+.expenseList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.expenseItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.expenseActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.expenseItem strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.expenseItem p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.92rem;
+}
+
+.expenseItem span {
+  white-space: nowrap;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.deleteButton {
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: rgba(127, 29, 29, 0.32);
+  color: #fecaca;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.deleteButton:hover {
+  background: rgba(153, 27, 27, 0.44);
+  border-color: rgba(248, 113, 113, 0.6);
+  transform: translateY(-1px);
+}
+
+.emptyState {
+  margin: 0;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px dashed rgba(148, 163, 184, 0.22);
+  color: #cbd5e1;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .app {
+    padding: 20px;
+  }
+
+  .hero,
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .app {
+    padding: 14px;
+  }
+
+  .hero {
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .heroCopy {
+    padding: 10px 0 4px;
+  }
+
+  .kicker {
+    margin-bottom: 10px;
+    font-size: 0.74rem;
+  }
+
+  .hero h1 {
+    max-width: none;
+    font-size: clamp(1.9rem, 11vw, 2.45rem);
+    line-height: 1.02;
+  }
+
+  .lead {
+    margin-top: 12px;
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statCard {
+    min-height: 0;
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .statCard strong {
+    font-size: 1.25rem;
+  }
+
+  .formCard,
+  .listCard,
+  .budgetCard,
+  .filterBar,
+  .geminiCard {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .cardHeader {
+    margin-bottom: 14px;
+  }
+
+  .cardHeader h2 {
+    font-size: 1.2rem;
+  }
+
+  .field {
+    margin-bottom: 12px;
+  }
+
+  .budgetActions {
+    grid-template-columns: 1fr;
+  }
+
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .expenseItem {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .expenseActions {
+    width: 100%;
+    margin-left: 0;
+    justify-content: space-between;
+  }
+
+  .deleteButton {
+    min-height: 40px;
+  }
+
+  .listStack {
+    gap: 12px;
+  }
+
+  .geminiForm {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .geminiTip {
+    padding: 14px;
+  }
+
+  .geminiSection {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .app {
+    padding: 10px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.7rem, 10vw, 2rem);
+  }
+
+  .formCard,
+  .listCard,
+  .budgetCard,
+  .filterBar,
+  .geminiCard,
+  .statCard {
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .expenseActions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .deleteButton {
+    width: 100%;
+  }
+}
